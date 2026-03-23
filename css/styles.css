@@ -1,15 +1,8 @@
-/* Colour Palette
-    off-black : #002438;
-    navy      : #003049;
-    orange    : #F77F00;
-    yellow    : #FCBF49;
-*/
-
-
 /* note: inner-container: width: 64.8125rem; 3/20 */
 body {
-    font-family: sans-serif;
+    font-family: "PT Sans", sans-serif;
     background: linear-gradient(90deg, #46A098 0%, #54A654 100%);
+    color: #FFFFFF;
 }
 
 /* Helper Classes */
@@ -22,12 +15,11 @@ body {
 /* Step: 1 Style the default/showing state. Starting with the mobile view, style the layout and links for how they will look when visible */
  
 header {
-    background-color: #003049;
-    color: #FCBF49; /* not going to change color because needs to be added to <a> */
+    background-color: #9846A0;
     padding: 1rem;
 }
 header a {
-    color: #FCBF49;
+    color: #FFFFFF;
     text-decoration: none;
     /* allows the clickable area to take up the full width and height of the li */
     display: block;
@@ -39,11 +31,12 @@ h1 a:hover {
  
 .menu a:hover,
 .menu a:active {
-    background-color: #002438;
+    border-radius: 0.3125rem;
+    background: #A258A9;
 }
 
 .toggle-btn {
-    background: #003049;
+    background: #9846A0;
     border: none;
     outline: none;
 }
@@ -70,7 +63,7 @@ header nav {
     top: 4.125rem;
     left: 0;
     width: 100vw;
-    background-color: #003049;
+    background-color: #9846A0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.7s ease-in-out;
@@ -82,21 +75,17 @@ header nav {
 /* ************************* section ****************** */
 section {
     padding: 3.125rem;
-    text-align: center;
-    text-transform: uppercase;
+    
+    
 }
 section p {
-    color: #002438;
+    color: #FFFFFF;
     border-bottom: 2px solid #F77F00;
     padding-bottom: .625rem;
     margin-bottom: .625rem;
-     font-size: 1.777rem;
+    font-size: 1.777rem;
 }
-section h2 {
-    color: #002438;
-    font-size: 3.157rem;
-    margin-bottom: 2rem;
-}
+
 .gallery {
     display: flex;
     flex-flow: wrap;
@@ -108,18 +97,20 @@ section h2 {
     position: relative;
 }
 span {
-    background-color: #FCBF49;
     color: #fff;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
+    font-weight: 700;
     user-select: none;
-    border-radius: .3125rem;
+    font-size: 2.5rem;
      /* position this span over the image */
-    position: absolute;
+    
     /* The top, right, bottom, left values position in relation to the screen UNLESS the parent container is a relative positioned element */
-    top: -1.25rem;
-    right: -0.625rem;
+   
 }
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 
 /* Step 4: add a media query and show the nav by default (hide the toggle button) and style it as a horizontal nav */
 
