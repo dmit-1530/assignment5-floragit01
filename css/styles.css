@@ -228,20 +228,16 @@ h1 {
 @media screen and (min-width: 96.25rem) {
    .inner-container {
         max-width: 62.8125rem;
-        margin: 0 auto;
+        margin: 0 auto;    
     }
-    header ul.menu {
+    /* .order > img:first-of-type,
+    .order > img:last-child,
+     header ul.menu  {
         position: unset;
-        
-    }
-    .order > img:first-of-type {
-        position: unset;
-    }
-    .order > img:last-child {
-        position: unset;
-    }
-    .order {
-        display: flex;
-        
-   }
+       
+    } */
+    
+    
+ 
+  
 }    
