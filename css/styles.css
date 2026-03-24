@@ -1,8 +1,8 @@
-/* note: inner-container: width: 64.8125rem; 3/20 */
 body {
     font-family: "PT Sans", sans-serif;
     background: linear-gradient(90deg, #46A098 0%, #54A654 100%);
     color: #FFFFFF;
+   
 }
 
 /* Helper Classes */
@@ -11,28 +11,46 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.inner-container {
+    max-width: 20rem;
+    margin: 0 auto;
+    
+    
+   
+} 
 /* *************** header & nav ****************** */
 /* Step: 1 Style the default/showing state. Starting with the mobile view, style the layout and links for how they will look when visible */
  
 header {
     background-color: #9846A0;
     padding: 1rem;
+    height: 5rem;
+    
 }
+
 header a {
     color: #FFFFFF;
     text-decoration: none;
     /* allows the clickable area to take up the full width and height of the li */
     display: block;
+    text-transform: uppercase;
+   
+    
+
+}
+.order {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2.94rem;
 }
 
-h1 a:hover {
-    color: #F77F00;
-}
+
  
 .menu a:hover,
 .menu a:active {
     border-radius: 0.3125rem;
     background: #A258A9;
+    
 }
 
 .toggle-btn {
@@ -43,16 +61,15 @@ h1 a:hover {
 .toggle-btn:hover {
     cursor: pointer;
 }
-.toggle-btn svg rect {
-    fill:  #FCBF49;
-}
-.toggle-btn:hover svg rect {
-    fill: #F77F00;
-}
+
 .menu li {
     /* the extra space from the additional line height, makes this a larger area and vertically centers the text */
     line-height: 2.5rem;
     text-align: center;
+    border: .0625rem solid #CECBCB;
+    line-height: 3.5rem;
+    
+
 }
 /* Step 2: Now let's hide the menu. Once it's hidden this is the default load stage. If using display: none; - that property cannot be transitioned. */
 
@@ -60,42 +77,30 @@ header nav {
       /* style this for how it will look overlapped the main content */
     /* this element does not have a parent container that is positioned relative, therefore it's positioned in relationship to the browser screen */
     position: absolute;
-    top: 4.125rem;
+    top: 5rem;
     left: 0;
     width: 100vw;
     background-color: #9846A0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.7s ease-in-out;
+    /* padding-bottom: 2.56rem; */
 }
 /* Step 3: Create a special class that will show the menu. This class name exists only in the CSS file for now. Next the javascript will add this class to the nav element for us. Let's go and do that in the main.js file */
 .show-nav {
     max-height: 100vh;
-}
+} 
 /* ************************* section ****************** */
-section {
-    padding: 3.125rem;
-    
-    
-}
+
 section p {
     color: #FFFFFF;
-    border-bottom: 2px solid #F77F00;
-    padding-bottom: .625rem;
-    margin-bottom: .625rem;
-    font-size: 1.777rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    width: 18rem;
+    
 }
 
-.gallery {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-}
-
-.thumbnail {
-    margin: 0 0.5rem;
-    position: relative;
-}
 span {
     color: #fff;
     font-weight: 700;
@@ -104,17 +109,40 @@ span {
      /* position this span over the image */
     
     /* The top, right, bottom, left values position in relation to the screen UNLESS the parent container is a relative positioned element */
-   
+   line-height: 2.5rem;
 }
 h1 {
     font-size: 2rem;
     font-weight: 400;
+    padding-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    width: 18rem;
+    line-height: 2.5rem;
 }
+
+.btn {
+    width: 15.0625rem;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    background: #9846A0;
+    padding: 0.75rem 1.5rem ;
+}
+.btn:hover,
+.btn:active {
+    background-color: #793880;
+}
+
+
+
+
 
 
 /* Step 4: add a media query and show the nav by default (hide the toggle button) and style it as a horizontal nav */
 
-/* Media Query */
+/* Media Query */  
 @media (min-width: 37.5rem) {
     .inner-container {
         max-width: 64rem;
@@ -141,6 +169,7 @@ h1 {
     .menu a:hover,
     .menu a:active {
         background-color: unset;
-        color: #F77F00;
+        border-radius: 0.3125rem;
+        background: #A258A9;
     }
 }
