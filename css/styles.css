@@ -160,9 +160,8 @@ h1 {
 @media screen and (min-width: 48.75rem) {
    .inner-container {
         max-width: 48.75rem;
-        height: 8rem;
         margin: 0 auto;
-        padding: 1rem;
+       
     }
     .toggle-btn {
         display: none;
@@ -180,6 +179,10 @@ h1 {
         align-items: center;
         justify-content: space-between;
         gap: 1.5rem;
+        
+    }
+    header {
+        height: 7.9375rem;
     }
     .menu a:hover,
     .menu a:active {
@@ -191,14 +194,33 @@ h1 {
     .order > nav {
         order: unset;
     }
-    header nav {
+    .order > img:first-of-type {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    .order > img:last-child {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    header ul.menu {
         position: absolute;
         top: 4rem;
-        left: 0;
         display: flex;
-        
+        justify-content: space-around;
+        width: 100%;    
+    }
+    .menu li {
+        border: none;
     }
     
+    section h1 {
+        width: 30.5rem;
+    }
+    section p {
+        width: 30.5rem;
+    }
 
 
 
