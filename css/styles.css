@@ -161,6 +161,7 @@ h1 {
    .inner-container {
         max-width: 48.75rem;
         margin: 0 auto;
+        position: relative;
        
     }
     .toggle-btn {
@@ -173,6 +174,9 @@ h1 {
         max-height: unset;
         overflow: visible;
     }
+    header {
+        height: 8rem;
+    }
     .menu,
     header .inner-container {
         display: flex;
@@ -181,36 +185,34 @@ h1 {
         gap: 1.5rem;
         
     }
-    header {
-        height: 7.9375rem;
-    }
+   
     .menu a:hover,
     .menu a:active {
         background-color: unset;
         border-radius: 0.3125rem;
         background: #A258A9;
     }
-    .order > img,
-    .order > nav {
-        order: unset;
-    }
+    
     .order > img:first-of-type {
         position: absolute;
         top: 1rem;
         left: 1rem;
+        order: unset;
     }
     .order > img:last-child {
         position: absolute;
         top: 1rem;
         right: 1rem;
+        order: unset;
     }
     header ul.menu {
         position: absolute;
-        top: 4rem;
+        top: 3.5rem;
         display: flex;
         justify-content: space-around;
         width: 100%; 
-        padding-right: 1.75rem;
+        padding-right: 1.75rem; 
+        height: 3.5rem;
 
     }
     .menu li {
@@ -234,6 +236,7 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: static;
     }
     .order > img:first-of-type,
     .order > img:last-child,
@@ -242,10 +245,15 @@ h1 {
         position: static; 
         
     }
+    header {
+        height: 5.5rem;
+    }
       header ul.menu {
         gap: 4rem;    
     }
-  
+   .order > img:last-child {
+        order: 3;
+   }
     
     
   
