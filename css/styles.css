@@ -26,6 +26,7 @@ header {
     padding: 1rem;
     height: 5rem;
     
+
 }
 
 header a {
@@ -38,13 +39,21 @@ header a {
     
 
 }
+
 .order {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 2.94rem;
+    align-items: center;
+    justify-content: space-between;
+
+   
+}
+.order > img {
+    order: 2;
 }
 
-
+.order > nav {
+    order: 1;
+}
  
 .menu a:hover,
 .menu a:active {
@@ -66,11 +75,13 @@ header a {
     /* the extra space from the additional line height, makes this a larger area and vertically centers the text */
     line-height: 2.5rem;
     text-align: center;
-    border: .0625rem solid #CECBCB;
+    border-top: .0625rem solid #CECBCB;
+    border-bottom: .0625rem solid #CECBCB;
     line-height: 3.5rem;
-    
+    font-size: 1.125rem;
 
 }
+
 /* Step 2: Now let's hide the menu. Once it's hidden this is the default load stage. If using display: none; - that property cannot be transitioned. */
 
 header nav {
@@ -85,10 +96,12 @@ header nav {
     overflow: hidden;
     transition: max-height 0.7s ease-in-out;
     /* padding-bottom: 2.56rem; */
+    
 }
 /* Step 3: Create a special class that will show the menu. This class name exists only in the CSS file for now. Next the javascript will add this class to the nav element for us. Let's go and do that in the main.js file */
 .show-nav {
     max-height: 100vh;
+    
 } 
 /* ************************* section ****************** */
 
@@ -97,7 +110,7 @@ section p {
     line-height: 1.5rem;
     margin-bottom: 2.5rem;
     font-size: 1rem;
-    width: 18rem;
+    padding-left: 1rem;
     
 }
 
@@ -106,18 +119,18 @@ span {
     font-weight: 700;
     user-select: none;
     font-size: 2.5rem;
-     /* position this span over the image */
+    line-height: 2.5rem;
     
-    /* The top, right, bottom, left values position in relation to the screen UNLESS the parent container is a relative positioned element */
-   line-height: 2.5rem;
 }
+
 h1 {
     font-size: 2rem;
     font-weight: 400;
     padding-top: 2.5rem;
+    padding-left: 1rem;
     margin-bottom: 1.5rem;
-    width: 18rem;
     line-height: 2.5rem;
+    
 }
 
 .btn {
@@ -129,6 +142,7 @@ h1 {
     text-transform: uppercase;
     background: #9846A0;
     padding: 0.75rem 1.5rem ;
+    margin-left: 1rem;
 }
 .btn:hover,
 .btn:active {
@@ -143,9 +157,10 @@ h1 {
 /* Step 4: add a media query and show the nav by default (hide the toggle button) and style it as a horizontal nav */
 
 /* Media Query */  
-@media (min-width: 37.5rem) {
-    .inner-container {
-        max-width: 64rem;
+@media screen and (min-width: 48.75rem) {
+   .inner-container {
+        max-width: 48.75rem;
+        height: 8rem;
         margin: 0 auto;
         padding: 1rem;
     }
@@ -172,4 +187,19 @@ h1 {
         border-radius: 0.3125rem;
         background: #A258A9;
     }
-}
+    .order > img,
+    .order > nav {
+        order: unset;
+    }
+    header nav {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        display: flex;
+        
+    }
+    
+
+
+
+}    
