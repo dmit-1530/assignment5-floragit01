@@ -227,17 +227,26 @@ h1 {
 
 @media screen and (min-width: 96.25rem) {
    .inner-container {
-        max-width: 62.8125rem;
+        max-width: 96.25rem;
         margin: 0 auto;    
     }
-    /* .order > img:first-of-type,
+    .flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .order > img:first-of-type,
     .order > img:last-child,
-     header ul.menu  {
-        position: unset;
-       
-    } */
+    header nav,
+    header ul.menu {
+        position: static; 
+        
+    }
+      header ul.menu {
+        gap: 4rem;    
+    }
+  
     
     
- 
   
 }    
