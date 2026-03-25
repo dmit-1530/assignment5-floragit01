@@ -227,9 +227,9 @@ h1 {
     }
 }    
 
-@media screen and (min-width: 96.25rem) {
+@media screen and (min-width: 120rem) {
    .inner-container {
-        max-width: 96.25rem;
+        max-width: 113.75rem;
         margin: 0 auto;    
     }
     .flex-container {
@@ -254,7 +254,11 @@ h1 {
    .order > img:last-child {
         order: 3;
    }
-    
-    
-  
+   section h1,
+   section p {
+    padding-left: 0;
+   }
+   .btn {
+    margin-left: 0;
+   } 
 }    
